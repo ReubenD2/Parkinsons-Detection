@@ -147,28 +147,28 @@ if (selected == "Full Feature Prediction"):
     with col2:
         PPE = st.text_input('PPE')
         
-    fo_float = float(fo) if fo != '' else None
-    fhi_float = float(fhi) if fhi != '' else None
-    flo_float = float(flo) if flo != '' else None
-    Jitter_percent_float = float(Jitter_percent) if Jitter_percent != '' else None
-    Jitter_Abs_float = float(Jitter_Abs) if Jitter_Abs != '' else None
-    RAP_float = float(RAP) if RAP != '' else None
-    PPQ_float= float(PPQ) if PPQ != '' else None
-    DDP_float = float(DDP) if DDP != '' else None
-    Shimmer_float = float(Shimmer) if Shimmer != '' else None
-    Shimmer_dB_float = float(Shimmer_dB) if Shimmer_dB != '' else None
-    APQ3_float = float(APQ3) if APQ3 != '' else None
-    APQ5_float = float(APQ5) if APQ5 != '' else None
-    APQ_float = float(APQ) if APQ != '' else None
-    DDA_float= float(DDA) if DDA != '' else None
-    NHR_float = float(NHR) if NHR != '' else None
-    HNR_float = float(HNR) if HNR != '' else None
-    RPDE_float = float(RPDE) if RPDE != '' else None
-    DFA_float = float(DFA) if DFA != '' else None
-    spread1_float = float(spread1) if spread1 != '' else None
-    spread2_float = float(spread2) if spread2 != '' else None
-    D2_float = float(D2) if D2 != '' else None
-    PPE_float = float(PPE) if PPE != '' else None
+    fo_float = float(fo) if fo != '' and all(c.isdigit() or c == '.' or c =='-' for c in fo) else None
+    fhi_float = float(fhi) if fhi != '' and all(c.isdigit() or c == '.' or c =='-' for c in fhi) else None
+    flo_float = float(flo) if flo != '' and all(c.isdigit() or c == '.' or c =='-' for c in flo) else None
+    Jitter_percent_float = float(Jitter_percent) if Jitter_percent != '' and all(c.isdigit() or c == '.' or c =='-' for c in Jitter_percent) else None
+    Jitter_Abs_float = float(Jitter_Abs) if Jitter_Abs != '' and all(c.isdigit() or c == '.' or c =='-' for c in Jitter_Abs) else None
+    RAP_float = float(RAP) if RAP != '' and all(c.isdigit() or c == '.' or c =='-' for c in RAP) else None
+    PPQ_float= float(PPQ) if PPQ != '' and all(c.isdigit() or c == '.' or c =='-' for c in PPQ) else None
+    DDP_float = float(DDP) if DDP != '' and all(c.isdigit() or c == '.' or c =='-' for c in DDP) else None
+    Shimmer_float = float(Shimmer) if Shimmer != '' and all(c.isdigit() or c == '.' or c =='-' for c in Shimmer) else None
+    Shimmer_dB_float = float(Shimmer_dB) if Shimmer_dB != '' and all(c.isdigit() or c == '.' or c =='-' for c in Shimmer_dB) else None
+    APQ3_float = float(APQ3) if APQ3 != '' and all(c.isdigit() or c == '.' or c =='-' for c in APQ3) else None
+    APQ5_float = float(APQ5) if APQ5 != '' and all(c.isdigit() or c == '.' or c =='-' for c in APQ5) else None
+    APQ_float = float(APQ) if APQ != '' and all(c.isdigit() or c == '.' or c =='-' for c in APQ) else None
+    DDA_float= float(DDA) if DDA != '' and all(c.isdigit() or c == '.' or c =='-' for c in DDA) else None
+    NHR_float = float(NHR) if NHR != '' and all(c.isdigit() or c == '.' or c =='-' for c in NHR) else None
+    HNR_float = float(HNR) if HNR != '' and all(c.isdigit() or c == '.' or c =='-' for c in HNR) else None
+    RPDE_float = float(RPDE) if RPDE != '' and all(c.isdigit() or c == '.' or c =='-' for c in RPDE) else None
+    DFA_float = float(DFA) if DFA != '' and all(c.isdigit() or c == '.' or c =='-' for c in DFA) else None
+    spread1_float = float(spread1) if spread1 != '' and all(c.isdigit() or c == '.' or c =='-' for c in spread1) else None
+    spread2_float = float(spread2) if spread2 != '' and all(c.isdigit() or c == '.' or c =='-' for c in spread2) else None
+    D2_float = float(D2) if D2 != '' and all(c.isdigit() or c == '.' or c =='-' for c in D2) else None
+    PPE_float = float(PPE) if PPE != '' and all(c.isdigit() or c == '.' or c =='-' for c in PPE) else None
     
     # code for Prediction
     parkinsons_diagnosis = ''
@@ -264,17 +264,17 @@ if (selected == "Selected Feature Prediction"):
     with col1:
         PPE1 = st.text_input('PPE')
         
-    fo1_float = float(fo1) if fo1 != '' else None
-    fhi1_float = float(fhi1) if fhi1 != '' else None
-    flo1_float = float(flo1) if flo1 != '' else None
-    Jitter_Abs1_float = float(Jitter_Abs1) if Jitter_Abs1 != '' else None
-    Shimmer_dB1_float = float(Shimmer_dB1) if Shimmer_dB1 != '' else None
-    APQ51_float = float(APQ51) if APQ51 != '' else None
-    APQ1_float = float(APQ1) if APQ1 != '' else None
-    HNR1_float = float(HNR1) if HNR1 != '' else None
-    spread11_float = float(spread11) if spread11 != '' else None
-    spread21_float = float(spread21) if spread21 != '' else None
-    PPE1_float = float(PPE1) if PPE1 != '' else None
+    fo1_float = float(fo1) if fo1 != '' and all(c.isdigit() or c == '.' or c =='-' for c in fo1) else None
+    fhi1_float = float(fhi1) if fhi1 != '' and all(c.isdigit() or c == '.' or c =='-' for c in fhi1) else None
+    flo1_float = float(flo1) if flo1 != '' and all(c.isdigit() or c == '.' or c =='-' for c in flo1) else None
+    Jitter_Abs1_float = float(Jitter_Abs1) if Jitter_Abs1 != '' and all(c.isdigit() or c == '.' or c =='-' for c in Jitter_Abs1) else None
+    Shimmer_dB1_float = float(Shimmer_dB1) if Shimmer_dB1 != '' and all(c.isdigit() or c == '.' or c =='-' for c in Shimmer_dB1) else None
+    APQ51_float = float(APQ51) if APQ51 != '' and all(c.isdigit() or c == '.' or c =='-' for c in APQ51) else None
+    APQ1_float = float(APQ1) if APQ1 != '' and all(c.isdigit() or c == '.' or c =='-' for c in APQ1) else None
+    HNR1_float = float(HNR1) if HNR1 != '' and all(c.isdigit() or c == '.' or c =='-' for c in HNR1) else None
+    spread11_float = float(spread11) if spread11 != '' and all(c.isdigit() or c == '.' or c =='-' for c in spread11) else None
+    spread21_float = float(spread21) if spread21 != '' and all(c.isdigit() or c == '.' or c =='-' for c in spread21) else None
+    PPE1_float = float(PPE1) if PPE1 != '' and all(c.isdigit() or c == '.' or c =='-' for c in PPE1) else None
     
     # code for Prediction
     parkinsons_diagnosis_mutual = ''
